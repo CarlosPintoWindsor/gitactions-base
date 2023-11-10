@@ -1,6 +1,13 @@
 name: BaseCI
 on:
-    workflow_call:
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
 
 jobs:
   build:
@@ -20,3 +27,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo Inputs: config-path: "${{ inputs.config-path }}"
+          echo Secrets: token: "${{ secrets.token }}"
