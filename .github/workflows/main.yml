@@ -10,9 +10,6 @@ on:
         required: true
 
 jobs:
-  checkout:
-    runs-on: ubuntu-latest
-
   scripts:
     runs-on: ubuntu-latest
     steps:
